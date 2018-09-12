@@ -10,16 +10,8 @@
 
 <p><br /></p>
 
-<pre><code>test=scorm_api.parent.API_1484_11;
+<pre><code>NewdoLMSSetValue("cmi.core.lesson_status", "completed");
+NewdoLMSSetValue("cmi.success_status", "passed");
+SetCredit(creditFlag);</code></pre>
 
-test.dataModelInterface.root.containers.cmi.elements.scaled_passing_score.writeable=true;
-test.SetValue("cmi.scaled_passing_score", 0.8);
-test.SetValue("cmi.score.scaled", 0.9);
-test.SetValue("cmi.completion_status", "completed");
-test.SetValue("cmi.success_status", "passed");
-test.SetValue("cmi.score.raw", 90);
-test.SetValue("adl.nav.request", "continue");
-
-test.Commit();
-test.FrameworkTerminate();
-test.completeUserSession(true);</code></pre>
+This works with SSD1 on ALMS as of 09 SEP 2018. This does not work on the tests of each module, nor does it work on the last section of module 4 concerning maps.
